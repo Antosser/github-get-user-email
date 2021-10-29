@@ -1,0 +1,12 @@
+.input {
+	margin: 5px;
+	border: 2px solid black;
+	padding: 3px;
+	display: inline-block;
+}
+button {
+	margin: 3px;
+}
+red {
+	color: red;
+}
