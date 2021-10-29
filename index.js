@@ -17,8 +17,15 @@ $("#getemail").click(() => {
 									emails.push(obj[i]["payload"]["commits"][j]["author"]["email"]);
 							}
 				}
-				$("#output").html(emails.join("<br>"));
+				if (emails.length > 0)
+					$("#output").html(emails.join("<br>"));
+				else {
+					$("#output").html("<red>No email found</red>");
+				}
 			},
+			404() {
+				$("#output").html("<red>User not found</red>");
+			}
 		},
 		error() {
 				$("#output").html("<red>Fetch failed</red>");
