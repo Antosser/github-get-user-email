@@ -32,3 +32,8 @@ $("#getemail").click(() => {
 			},
 	});
 });
+
+$("#username").keydown(e=>{
+	if (e.which == 13)
+		$("#getemail").click();
+});
